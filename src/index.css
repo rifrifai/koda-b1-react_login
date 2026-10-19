@@ -1,1 +1,25 @@
 @import "tailwindcss";
+
+.form-error {
+	@apply mt-1 text-sm text-red-600;
+}
+
+.btn-login {
+	@apply w-full py-2 mt-2 text-white bg-blue-600 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors duration-200 font-semibold disabled:opacity-60;
+}
+
+.btn-link {
+	@apply block w-full py-2 text-center text-blue-600 border border-blue-600 rounded-md hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors duration-200 font-semibold
+}
+
+.label-input {
+	@apply mb-1 text-sm font-medium text-gray-700;
+}
+
+.title-login-register {
+	@apply text-2xl font-bold text-center text-gray-800 mb-4;
+}
+
+.form {
+	@apply max-w-sm mx-auto p-6 bg-white shadow-md rounded-lg flex flex-col gap-4 mt-10;
+}

@@ -34,12 +34,12 @@ export default function Register() {
 			<form
 				onSubmit={handleSubmit(onSubmit)}
 				noValidate
-				className="max-w-sm mx-auto p-6 bg-white shadow-md rounded-lg flex flex-col gap-4 mt-10"
+				className="form"
 			>
-				<h2 className="text-2xl font-bold text-center text-gray-800 mb-4">Register</h2>
+				<h2 className="title-login-register">Register</h2>
 
 				<div className="flex flex-col">
-					<label htmlFor="name" className="mb-1 text-sm font-medium text-gray-700">
+					<label htmlFor="name" className="label-input">
 						Nama:
 					</label>
 					<input
@@ -49,11 +49,11 @@ export default function Register() {
 						{...register("name")}
 						className={inputClass(errors.name)}
 					/>
-					{errors.name && <p className="mt-1 text-sm text-red-600">{errors.name.message}</p>}
+					{errors.name && <p className="form-error">{errors.name.message}</p>}
 				</div>
 
 				<div className="flex flex-col">
-					<label htmlFor="email" className="mb-1 text-sm font-medium text-gray-700">
+					<label htmlFor="email" className="label-input">
 						Email:
 					</label>
 					<input
@@ -63,11 +63,11 @@ export default function Register() {
 						{...register("email")}
 						className={inputClass(errors.email)}
 					/>
-					{errors.email && <p className="mt-1 text-sm text-red-600">{errors.email.message}</p>}
+					{errors.email && <p className="form-error">{errors.email.message}</p>}
 				</div>
 
 				<div className="flex flex-col">
-					<label htmlFor="password" className="mb-1 text-sm font-medium text-gray-700">
+					<label htmlFor="password" className="label-input">
 						Password:
 					</label>
 					<input
@@ -77,11 +77,11 @@ export default function Register() {
 						{...register("password")}
 						className={inputClass(errors.password)}
 					/>
-					{errors.password && <p className="mt-1 text-sm text-red-600">{errors.password.message}</p>}
+					{errors.password && <p className="form-error">{errors.password.message}</p>}
 				</div>
 
 				<div className="flex flex-col">
-					<label htmlFor="confirmPassword" className="mb-1 text-sm font-medium text-gray-700">
+					<label htmlFor="confirmPassword" className="label-input">
 						Konfirmasi Password:
 					</label>
 					<input
@@ -92,21 +92,21 @@ export default function Register() {
 						className={inputClass(errors.confirmPassword)}
 					/>
 					{errors.confirmPassword && (
-						<p className="mt-1 text-sm text-red-600">{errors.confirmPassword.message}</p>
+						<p className="form-error">{errors.confirmPassword.message}</p>
 					)}
 				</div>
 
 				<button
 					type="submit"
 					disabled={isSubmitting}
-					className="w-full py-2 mt-2 text-white bg-blue-600 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors duration-200 font-semibold disabled:opacity-60"
+					className="btn-login"
 				>
 					Register
 				</button>
 
 				<Link
 					to="/"
-					className="block w-full py-2 text-center text-blue-600 border border-blue-600 rounded-md hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors duration-200 font-semibold"
+					className="btn-link"
 				>
 					Sudah punya akun? Login
 				</Link>
