@@ -21,13 +21,13 @@ export default function Register() {
 		reset();
 	}
 
-	function inputClass(error) {
-		return `w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 ${
-			error
-				? "border-red-500 focus:ring-red-500"
-				: "border-gray-300 focus:ring-blue-500 focus:border-blue-500"
-		}`;
-	}
+	// function inputClass(error) {
+	// 	return `w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 ${
+	// 		error
+	// 			? "border-red-500 focus:ring-red-500"
+	// 			: "border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+	// 	}`;
+	// }
 
 	return (
 		<>
@@ -47,7 +47,8 @@ export default function Register() {
 						id="name"
 						placeholder="Masukkan nama Anda..."
 						{...register("name")}
-						className={inputClass(errors.name)}
+						// className={inputClass(errors.name)}
+						className={`input ${errors.email} ? "input-error" : "input-success"`}
 					/>
 					{errors.name && <p className="form-error">{errors.name.message}</p>}
 				</div>
@@ -61,7 +62,8 @@ export default function Register() {
 						id="email"
 						placeholder="Masukkan email Anda..."
 						{...register("email")}
-						className={inputClass(errors.email)}
+						// className={inputClass(errors.email)}
+						className={`input ${errors.email} ? "input-error" : "input-success"`}
 					/>
 					{errors.email && <p className="form-error">{errors.email.message}</p>}
 				</div>
@@ -75,7 +77,8 @@ export default function Register() {
 						id="password"
 						placeholder="Minimal 8 karakter"
 						{...register("password")}
-						className={inputClass(errors.password)}
+						// className={inputClass(errors.password)}
+						className={`input ${errors.email} ? "input-error" : "input-success"`}
 					/>
 					{errors.password && <p className="form-error">{errors.password.message}</p>}
 				</div>
@@ -89,7 +92,8 @@ export default function Register() {
 						id="confirmPassword"
 						placeholder="Ulangi password Anda..."
 						{...register("confirmPassword")}
-						className={inputClass(errors.confirmPassword)}
+						// className={inputClass(errors.confirmPassword)}
+						className={`input ${errors.confirmPassword} ? "input-error" : "input-success"`}
 					/>
 					{errors.confirmPassword && (
 						<p className="form-error">{errors.confirmPassword.message}</p>

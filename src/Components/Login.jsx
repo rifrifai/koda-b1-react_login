@@ -40,10 +40,10 @@ export default function Login() {
 						id="email"
 						placeholder="Masukkan email Anda..."
 						{...register("email")}
-						className={`w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 ${
+						className={`input ${
 							errors.email
-								? "border-red-500 focus:ring-red-500"
-								: "border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+								? "input-error"
+								: "input-success"
 						}`}
 					/>
 					{errors.email && (
@@ -60,10 +60,10 @@ export default function Login() {
 						id="password"
 						placeholder="Masukkan password Anda..."
 						{...register("password")}
-						className={`w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 ${
+						className={`input ${
 							errors.password
-								? "border-red-500 focus:ring-red-500"
-								: "border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+								? "input-error"
+								: "input-success"
 						}`}
 					/>
 					{errors.password && (
